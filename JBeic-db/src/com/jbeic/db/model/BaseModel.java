@@ -23,7 +23,7 @@ public class BaseModel implements Mode {
 		Class<? extends Object> cls = object.getClass();
 		//解析类生成表信息
 		TableInfo tableInfo = new TableInfo.Builder().tableName(ModelUtil.getTableName(cls)).fieldInfoList(ModelUtil.getFieldInfoList(cls)).build();
-		
+		new SQLModel().createDB(tableInfo);
 		System.err.println(tableInfo.toString());
 		return false;
 	}
