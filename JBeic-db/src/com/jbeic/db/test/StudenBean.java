@@ -7,7 +7,7 @@ public class StudenBean {
 	private int age;
 	@TableField
 	private String name;
-	@TableField
+	@TableField(isKey=true)
 	private int num;
 	private int nums;
 	public int getAge() {

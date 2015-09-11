@@ -41,6 +41,20 @@ public class TableInfo {
 			return new TableInfo(this);
 		}
 	}
+	
+	
+
+	public String getTableName() {
+		return tableName;
+	}
+
+
+
+	public List<FieldInfo> getFieldInfoList() {
+		return fieldInfoList;
+	}
+
+
 
 	@Override
 	public String toString() {

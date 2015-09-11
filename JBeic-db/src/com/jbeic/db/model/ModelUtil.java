@@ -85,8 +85,10 @@ public class ModelUtil {
 					if(fieldtype.equals("other")){
 						continue;
 					}
-					boolean isKey = tableField.isKey();
+					
 					boolean isNull = tableField.isNull();
+					boolean isKey = tableField.isKey();
+					if(isKey)isNull=false;//主键不能为空
 					int size = tableField.size();
 					FieldInfo fInfo = new FieldInfo.Builder().filedName(filedName).fieldtype(fieldtype).isKey(isKey).isNull(isNull).size(size).build();
 					fieldInfoList.add(fInfo);
